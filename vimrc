@@ -31,12 +31,16 @@ set wildmenu
 set wildmode=longest,list,full
 set hlsearch
 set wildignore+=*.pyc,.DS_Store,*min.js,*.map,*.log,node_modules
+set wildignore+=*.swp,*.zip,*.so,*/tmp/*,*/\.git/*,*/vendor/*
+
 highlight Search ctermfg=Black ctermbg=Yellow guifg=Black guibg=Yellow
 highlight Pmenu ctermbg=238 gui=bold
 
 " ctrlp config
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
 
 " Some Linux distributions set filetype in /etc/vimrc.
 " Clear filetype flags before changing runtimepath to force Vim to reload them.
@@ -52,8 +56,14 @@ nnoremap <leader>w :w<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <CR> G
 nnoremap <BS> gg
+nnoremap <Leader>[ :tabp<CR>
+nnoremap <Leader>] :tabn<CR>
+nnoremap <Leader>n :tabnew<CR>
+nnoremap <Leader>c :tabclose<CR>
 nmap <kEnter> <Enter>
 
 vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
     \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
 omap s :normal vs<CR>
+
+
