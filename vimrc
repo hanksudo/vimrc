@@ -60,6 +60,7 @@ nnoremap <Leader>[ :tabp<CR>
 nnoremap <Leader>] :tabn<CR>
 nnoremap <Leader>n :tabnew<CR>
 nnoremap <Leader>c :tabclose<CR>
+map <Leader> <Plug>(easymotion-prefix)
 nmap <kEnter> <Enter>
 
 vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
