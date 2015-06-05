@@ -56,10 +56,10 @@ nnoremap <leader>w :w<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <CR> G
 nnoremap <BS> gg
-nnoremap <Leader>[ :tabp<CR>
-nnoremap <Leader>] :tabn<CR>
 nnoremap <Leader>n :tabnew<CR>
 nnoremap <Leader>c :tabclose<CR>
+map <C-k> :tabp<CR>
+map <C-j> :tabn<CR>
 map <Leader> <Plug>(easymotion-prefix)
 nmap <kEnter> <Enter>
 
