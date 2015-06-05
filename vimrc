@@ -11,6 +11,7 @@ set nocompatible
 set autoindent
 set autoread
 set backspace=2   " Backspace deletes like most programs in insert mode
+set background=dark
 set cursorline
 set encoding=utf-8
 set expandtab     " expand tabs to spaces
