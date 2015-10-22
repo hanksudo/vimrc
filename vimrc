@@ -54,6 +54,8 @@ filetype plugin indent on
 let mapleader = ","
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>w :w<CR>
+nnoremap <leader>x :x<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <CR> G
 nnoremap <BS> gg
@@ -61,8 +63,9 @@ nnoremap <Leader>n :tabnew<CR>
 nnoremap <Leader>c :tabclose<CR>
 map <C-k> :tabp<CR>
 map <C-j> :tabn<CR>
-map <Leader> <Plug>(easymotion-prefix)
+" map <Leader> <Plug>(easymotion-prefix)
 nmap <kEnter> <Enter>
+
 
 vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
     \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
