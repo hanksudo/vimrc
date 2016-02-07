@@ -57,6 +57,15 @@ filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 
+" === Plugin config
+let g:vim_json_syntax_conceal = 0
+
+" NERDComment
+let g:NERDSpaceDelims = 1
+
+" NERDTreeToggle
+let NERDTreeShowHidden = 1
+
 " keyboard shortcuts
 let mapleader = ","
 nnoremap <leader>d :NERDTreeToggle<CR>
