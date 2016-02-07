@@ -1,38 +1,45 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-filetype off
-syntax on
-filetype on
-filetype indent on
-filetype plugin on
-
 set nocompatible
+filetype off
+filetype plugin indent on
+
 set autoindent
 set autoread
-set backspace=2   " Backspace deletes like most programs in insert mode
-set background=dark
+set backspace=indent,eol,start  " Backspace deletes like most programs in insert mode
 set cursorline
 set encoding=utf-8
-set expandtab     " expand tabs to spaces
+set expandtab                   " expand tabs to spaces
 set ignorecase
-set nobackup
+set smartcase
+set noswapfile                  " Don't use swapfile
+set nobackup                    " Don't create backup files
 set number
 set ruler
-set showcmd       " display incomplete commands
+set showcmd                     " display incomplete commands
+set showmode
 set showmatch
 set softtabstop=4
 set shiftwidth=4
-set smartcase
-set ts=4          " set tabs to have 4 spaces
-set laststatus=2  " Always display the status line
-set list          " show trailing whitespace
+set splitright
+set splitbelow
+set ts=4                        " set tabs to have 4 spaces
+set hidden
+set laststatus=2                " Always display the status line
+set list                        " show trailing whitespace
 set listchars=tab:▸\ ,trail:▫
 set wildmenu
 set wildmode=longest,list,full
 set hlsearch
 set wildignore+=*.pyc,.DS_Store,*min.js,*.map,*.log,node_modules
 set wildignore+=*.swp,*.zip,*.so,*/tmp/*,*/\.git/*,*/vendor/*
+
+syntax enable
+set t_Co=256
+set background=dark
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = "hard"
 
 highlight Search ctermfg=Black ctermbg=Yellow guifg=Black guibg=Yellow
 highlight Pmenu ctermbg=238 gui=bold
@@ -71,4 +78,3 @@ vnoremap <silent> s //e<C-r>=&selection=='exclusive'?'+1':''<CR><CR>
     \:<C-u>call histdel('search',-1)<Bar>let @/=histget('search',-1)<CR>gv
 omap s :normal vs<CR>
 
-colorscheme hybrid
