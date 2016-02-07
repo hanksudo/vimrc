@@ -14,6 +14,11 @@ or wget (for most UNIX platforms):
 wget -O - https://raw.github.com/hanksudo/vimrc/master/install.sh | sh
 ```
 
+## Plugins
+
+- [scrooloose/nerdcommenter: Vim plugin for intensely orgasmic commenting](https://github.com/scrooloose/nerdcommenter)
+
+
 ## Scripts
 
 ### vim highlight support for nginx
