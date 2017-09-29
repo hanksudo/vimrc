@@ -7,6 +7,7 @@ filetype plugin indent on
 
 set autoindent
 set autoread
+set autowrite
 set backspace=indent,eol,start  " Backspace deletes like most programs in insert mode
 set cursorline
 set encoding=utf-8
