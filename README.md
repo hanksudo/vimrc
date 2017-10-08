@@ -4,15 +4,11 @@ My vim configuration
 
 ## Installation
 
-Use curl (for OSX)
 ```bash
-curl -L https://raw.github.com/hanksudo/vimrc/master/install.sh | sh
+git clone --depth=1 https://github.com/hanksudo/vimrc.git ~/.vim
+sh ~/.vim/install.sh
 ```
 
-or wget (for most UNIX platforms):
-```bash
-wget -O - https://raw.github.com/hanksudo/vimrc/master/install.sh | sh
-```
 
 ## Plugins
 

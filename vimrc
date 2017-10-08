@@ -1,9 +1,8 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-set nocompatible
-filetype off
-filetype plugin indent on
+filetype plugin on
+filetype indent on
 
 set autoindent
 set autoread
@@ -21,6 +20,7 @@ set ruler
 set showcmd                     " display incomplete commands
 set showmode
 set showmatch
+set so=7
 set softtabstop=4
 set shiftwidth=4
 set splitright
@@ -70,7 +70,7 @@ let NERDTreeShowHidden = 1
 " keyboard shortcuts
 let mapleader = ","
 nnoremap <leader>d :NERDTreeToggle<CR>
-nnoremap <leader>w :w<CR>
+nnoremap <leader>w :w!<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <Leader>o :CtrlP<CR>
