@@ -44,6 +44,8 @@ let g:gruvbox_contrast_dark = "hard"
 
 highlight Search ctermfg=Black ctermbg=Yellow guifg=Black guibg=Yellow
 highlight Pmenu ctermbg=238 gui=bold
+highlight Normal ctermbg=none
+
 
 " ctrlp config
 let g:ctrlp_working_path_mode = 'ra'
