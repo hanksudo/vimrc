@@ -1,15 +1,16 @@
 #!/bin/sh
 set -e
 
-if [ -d "$HOME/.vimrc" ]; then
-    echo "=> dotfiles is already installed in $HOME/.vimrc, trying to update"
+if [ -d "$HOME/.vim" ]; then
+    echo "=> vimrc is already installed in $HOME/.vim, trying to update"
     echo "=> "
-    cd "$HOME"/.vimrc && git pull
+    cd "$HOME"/.vim && git pull
 else
-    echo "=> clone dotfiles from Github..."
-    git clone https://github.com/hanksudo/vimrc.git "$HOME"/.vimrc
-    cd "$HOME"/.vimrc || exit
+    echo "=> clone vimrc from Github..."
+    git clone https://github.com/hanksudo/vimrc.git "$HOME"/.vim
+    cd "$HOME"/.vim || exit
 fi
 echo ""
 
-cd "$HOME"/.vimrc && git submodule update --init
+cd "$HOME"/.vim && git submodule update --init
+cp vimrc "$HOME"/.vimrc
