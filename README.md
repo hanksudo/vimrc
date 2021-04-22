@@ -5,8 +5,7 @@ My vim configuration
 ## Installation
 
 ```bash
-git clone --depth=1 https://github.com/hanksudo/vimrc.git ~/.vim
-sh ~/.vim/install.sh
+curl -L https://raw.github.com/hanksudo/vimrc/master/install.sh | sh
 ```
 
 ## Plugins
@@ -30,4 +29,4 @@ wget -O - http://www.vim.org/scripts/download_script.php?src_id=19394 > nginx.vi
 cat > ~/.vim/filetype.vim <<EOF
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == ‘’ | setfiletype nginx | endif
 EOF
-``` 
+```
